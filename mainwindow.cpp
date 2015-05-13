@@ -3,6 +3,7 @@
 #include <QDebug>
 #include <QKeyEvent>
 #include <math.h>
+#include <cstdlib>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -38,8 +39,13 @@ MainWindow::~MainWindow()
 
 void MainWindow::keyPressEvent(QKeyEvent *event)
 {
+    srand(time(NULL));
+
     QString temp_string;
+    int rand_num;
     int temp_int=0;
+    bool wall=false;
+    bool full=true;
 
     if(event->key() == Qt::Key_Right){
         //move
@@ -60,6 +66,12 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
              for(int i=l;i>l-3;i--){
                   for(int j=i-1;j>l-4;j--)
                         if(block[i]->text() != "0" && block[i]->text() == block[j]->text()){
+                             for(int k=j+1;k<i;k++)
+                                 if(block[k]->text() != "0"){
+                                     wall=true;
+                                     break;
+                                 }
+                             if(wall){wall=false;break;}
                              block[j]->setText("0");
                              block[j]->hide();
                              temp_int = log2(block[i]->text().toInt());
@@ -67,10 +79,6 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                              block[i]->setText(temp_string);
                          }
              }
-        //clean tile
-        for(int i=0;i<16;i++)
-            if(block[i]->text()=="0")
-                block[i]->hide();
     }
     if(event->key() == Qt::Key_Left){
 
@@ -92,6 +100,12 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
              for(int i=l;i<l+3;i++){
                   for(int j=i+1;j<l+4;j++)
                         if(block[i]->text() != "0" && block[i]->text() == block[j]->text()){
+                             for(int k=i+1;k<j;k++)
+                                 if(block[k]->text() != "0"){
+                                     wall=true;
+                                     break;
+                                }
+                             if(wall){wall=false;break;}
                              block[j]->setText("0");
                              block[j]->hide();
                              temp_int = log2(block[i]->text().toInt());
@@ -99,13 +113,6 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                              block[i]->setText(temp_string);
                          }
              }
-
-
-        //clean tile
-        for(int i=0;i<16;i++)
-            if(block[i]->text()=="0")
-                block[i]->hide();
-
     }
     if(event->key() == Qt::Key_Up){
         //move
@@ -125,6 +132,12 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
              for(int i=l;i<l+9;i=i+4){
                   for(int j=i+4;j<l+13;j=j+4)
                         if(block[i]->text() != "0" && block[i]->text() == block[j]->text()){
+                             for(int k=i+4;k<j;k=k+4)
+                                if(block[k]->text() != "0"){
+                                    wall=true;
+                                    break;
+                             }
+                             if(wall){wall=false;break;}
                              block[j]->setText("0");
                              block[j]->hide();
                              temp_int = log2(block[i]->text().toInt());
@@ -132,11 +145,6 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                              block[i]->setText(temp_string);
                          }
              }
-        //clean tile
-        for(int i=0;i<16;i++)
-            if(block[i]->text()=="0")
-                block[i]->hide();
-
     }
     if(event->key() == Qt::Key_Down){
         //move
@@ -156,6 +164,12 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
              for(int i=l;i>l-9;i=i-4){
                   for(int j=i-4;j>l-13;j=j-4)
                         if(block[i]->text() != "0" && block[i]->text() == block[j]->text()){
+                             for(int k=j+4;k<i;k=k+4)
+                                if(block[k]->text() != "0"){
+                                    wall=true;
+                                    break;
+                             }
+                             if(wall){wall=false;break;}
                              block[j]->setText("0");
                              block[j]->hide();
                              temp_int = log2(block[i]->text().toInt());
@@ -163,10 +177,14 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                              block[i]->setText(temp_string);
                          }
              }
-        //clean tile
-        for(int i=0;i<16;i++)
-            if(block[i]->text()=="0")
-                block[i]->hide();
-
+    }
+    for(int i=0;i<16;i++)
+        if(block[i]->text()=="0")
+            full=false;
+    int counter=0;
+    if(!full){
+        do{rand_num=rand()%16;counter++;qDebug()<<counter<<" "<<"bug!";}while(block[rand_num]->text()!="0");
+        block[rand_num]->setText("2");
+        block[rand_num]->show();
     }
 }
