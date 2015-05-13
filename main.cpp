@@ -16,20 +16,15 @@ int main(int argc, char *argv[])
     int rand_num2;
     do{rand_num2 = rand()%16;}
     while(rand_num2==rand_num);
-    /*w.block[rand_num]->show();
+    w.block[rand_num]->show();
     w.block[rand_num2]->show();
     w.block[rand_num]->setText("2");
-    w.block[rand_num2]->setText("2");*/
+    w.block[rand_num2]->setText("2");
 
     w.block[1]->show();
     w.block[2]->show();
     w.block[1]->setText("2");
     w.block[2]->setText("2");
-
-    w.block[3]->show();
-    w.block[6]->show();
-    w.block[3]->setText("2");
-    w.block[6]->setText("2");
 
 
 
