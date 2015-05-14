@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 
     //creat two random tiles when beginning
     srand(time(NULL));
-    int rand_num=rand()%16;
+    /*int rand_num=rand()%16;
     int rand_num2;
     do{rand_num2 = rand()%16;}
     while(rand_num2==rand_num);
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     w.block[rand_num]->setText("2");
     w.block[rand_num2]->setText("2");
 
-   /* w.block[0]->show();
+    w.block[0]->show();
     w.block[0]->setText("2");
     w.block[1]->show();
     w.block[1]->setText("4");
@@ -46,13 +46,13 @@ int main(int argc, char *argv[])
     w.block[11]->show();
     w.block[11]->setText("2");
     w.block[12]->show();
-    w.block[12]->setText("32");
+    w.block[12]->setText("32");*/
     w.block[13]->show();
     w.block[13]->setText("8");
     w.block[14]->show();
-    w.block[14]->setText("8");
+    w.block[14]->setText("1024");
     w.block[15]->show();
-    w.block[15]->setText("32");*/
+    w.block[15]->setText("1024");
 
 
 

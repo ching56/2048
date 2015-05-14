@@ -17,9 +17,13 @@ public:
     ~MainWindow();
     void keyPressEvent(QKeyEvent * event);
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     QLabel* block[16];
     Ui::MainWindow *ui;
+    int score;
 };
 
 #endif // MAINWINDOW_H

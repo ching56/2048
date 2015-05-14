@@ -4,10 +4,13 @@
 #include <QKeyEvent>
 #include <math.h>
 #include <cstdlib>
+#include <QElapsedTimer>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {       ui->setupUi(this);
+
+        score = 0;
 
         //hide all tiles
         block[0] = ui->tile_1;
@@ -26,6 +29,9 @@ MainWindow::MainWindow(QWidget *parent) :
         block[13] =ui->tile_14;
         block[14] =ui->tile_15;
         block[15] =ui->tile_16;
+
+
+        ui->lcdNumber->setDigitCount(7);
 
         for(int i=0;i<16;i++)
             block[i]->hide();
@@ -46,6 +52,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     int temp_int=0;
     bool wall=false;
     bool full=true;
+    bool end=false;
 
     if(event->key() == Qt::Key_Right){
         //move
@@ -74,6 +81,8 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                              if(wall){wall=false;break;}
                              block[j]->setText("0");
                              block[j]->hide();
+                             score = score+5;
+                             ui->lcdNumber->display(score);
                              temp_int = log2(block[i]->text().toInt());
                              temp_string.setNum(pow(2,temp_int+1));
                              block[i]->setText(temp_string);
@@ -108,6 +117,8 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                              if(wall){wall=false;break;}
                              block[j]->setText("0");
                              block[j]->hide();
+                             score = score+5;
+                             ui->lcdNumber->display(score);
                              temp_int = log2(block[i]->text().toInt());
                              temp_string.setNum(pow(2,temp_int+1));
                              block[i]->setText(temp_string);
@@ -140,6 +151,8 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                              if(wall){wall=false;break;}
                              block[j]->setText("0");
                              block[j]->hide();
+                             score = score+5;
+                             ui->lcdNumber->display(score);
                              temp_int = log2(block[i]->text().toInt());
                              temp_string.setNum(pow(2,temp_int+1));
                              block[i]->setText(temp_string);
@@ -172,6 +185,8 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                              if(wall){wall=false;break;}
                              block[j]->setText("0");
                              block[j]->hide();
+                             score = score+5;
+                             ui->lcdNumber->display(score);
                              temp_int = log2(block[i]->text().toInt());
                              temp_string.setNum(pow(2,temp_int+1));
                              block[i]->setText(temp_string);
@@ -181,10 +196,46 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     for(int i=0;i<16;i++)
         if(block[i]->text()=="0")
             full=false;
-    int counter=0;
     if(!full){
-        do{rand_num=rand()%16;counter++;qDebug()<<counter<<" "<<"bug!";}while(block[rand_num]->text()!="0");
+        do{rand_num=rand()%16;}while(block[rand_num]->text()!="0");
         block[rand_num]->setText("2");
         block[rand_num]->show();
     }
+    for(int i=0;i<16;i++)
+        if(block[i]->text()=="2048")
+            end=true;
+    if(end){
+        QElapsedTimer t;
+
+        for(int i=0;i<16;i++){
+            block[i]->setText("2048!");
+            block[i]->show();
+        }
+        t.start();
+        while(t.elapsed()<2000)
+            QCoreApplication::processEvents();
+        on_pushButton_clicked();
+    }
+
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    for(int i=0;i<16;i++){
+        block[i]->setText("0");
+        block[i]->hide();
+    }
+
+    score = 0;
+    ui->lcdNumber->display(score);
+
+    srand(time(NULL));
+    int rand_num=rand()%16;
+    int rand_num2;
+    do{rand_num2 = rand()%16;}
+    while(rand_num2==rand_num);
+    block[rand_num]->show();
+    block[rand_num2]->show();
+    block[rand_num]->setText("2");
+    block[rand_num2]->setText("2");
 }
