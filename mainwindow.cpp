@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {       ui->setupUi(this);
 
         score = 0;
+        ui->text2048->setAttribute(Qt::WA_TranslucentBackground, true);
 
         //hide all tiles
         block[0] = ui->tile_1;
@@ -211,10 +212,12 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
             block[i]->setText("2048!");
             block[i]->show();
         }
+        QWidget::setEnabled(false);
         t.start();
         while(t.elapsed()<2000)
             QCoreApplication::processEvents();
         on_pushButton_clicked();
+        QWidget::setEnabled(true);
     }
 
 }

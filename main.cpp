@@ -55,7 +55,5 @@ int main(int argc, char *argv[])
     w.block[15]->setText("1024");
 
 
-
-
     return a.exec();
 }
