@@ -48,11 +48,14 @@ int main(int argc, char *argv[])
     w.block[12]->show();
     w.block[12]->setText("32");*/
     w.block[13]->show();
-    w.block[13]->setText("8");
+    w.block[13]->setText(w.b[1]);
+    w.block[13]->setStyleSheet(w.c[1]);
     w.block[14]->show();
-    w.block[14]->setText("1024");
+    w.block[14]->setText(w.b[10]);
+    w.block[14]->setStyleSheet(w.c[10]);
     w.block[15]->show();
-    w.block[15]->setText("1024");
+    w.block[15]->setText(w.b[10]);
+    w.block[15]->setStyleSheet(w.c[10]);
 
 
     return a.exec();

@@ -4,11 +4,42 @@
 #include <QKeyEvent>
 #include <math.h>
 #include <cstdlib>
+#include <QString>
 #include <QElapsedTimer>
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {       ui->setupUi(this);
+
+        b[0] = "<html><head/><body><p><span style=\" font-size:36pt; color:#ffffff;\">0</span></p></body></html>";
+        b[1] = "<html><head/><body><p><span style=\" font-size:36pt; color:#ffffff;\">2</span></p></body></html>";
+        b[2] = "<html><head/><body><p><span style=\" font-size:36pt; color:#ffffff;\">4</span></p></body></html>";
+        b[3] = "<html><head/><body><p><span style=\" font-size:36pt; color:#ffffff;\">8</span></p></body></html>";
+        b[4] = "<html><head/><body><p><span style=\" font-size:36pt; color:#ffffff;\">16</span></p></body></html>";
+        b[5] = "<html><head/><body><p><span style=\" font-size:36pt; color:#ffffff;\">32</span></p></body></html>";
+        b[6] = "<html><head/><body><p><span style=\" font-size:36pt; color:#ffffff;\">64</span></p></body></html>";
+        b[7] = "<html><head/><body><p><span style=\" font-size:36pt; color:#ffffff;\">128</span></p></body></html>";
+        b[8] = "<html><head/><body><p><span style=\" font-size:36pt; color:#ffffff;\">256</span></p></body></html>";
+        b[9] = "<html><head/><body><p><span style=\" font-size:36pt; color:#ffffff;\">512</span></p></body></html>";
+        b[10] = "<html><head/><body><p><span style=\" font-size:36pt; color:#ffffff;\">1024</span></p></body></html>";
+        b[11] = "<html><head/><body><p><span style=\" font-size:36pt; color:#ffffff;\">2048</span></p></body></html>";
+        b[12] = "<html><head/><body><p><span style=\" font-size:30pt; color:#ffffff;\">2048!</span></p></body></html>";
+
+        c[0] = "QLabel { border-width:1px;border-color:black;border-radius: 10px;background-color: rgb(216, 179, 104);}";
+        c[1] = "QLabel { border-width:1px;border-color:black;border-radius: 10px;background-color: rgb(123, 163, 168);}";
+        c[2] = "QLabel { border-width:1px;border-color:black;border-radius: 10px;background-color: rgb(244, 243, 222);}";
+        c[3] = "QLabel { border-width:1px;border-color:black;border-radius: 10px;background-color: rgb(190, 173, 146);}";
+        c[4] = "QLabel { border-width:1px;border-color:black;border-radius: 10px;background-color: rgb(91, 73, 71);}";
+        c[5] = "QLabel { border-width:1px;border-color:black;border-radius: 10px;background-color: rgb(64, 128, 0);}";
+        c[6] = "QLabel { border-width:1px;border-color:black;border-radius: 10px;background-color: rgb(0, 171, 216);}";
+        c[7] = "QLabel { border-width:1px;border-color:black;border-radius: 10px;background-color: rgb(0, 137, 114);}";
+        c[8] = "QLabel { border-width:1px;border-color:black;border-radius: 10px;background-color: rgb(245, 197, 100);}";
+        c[9] = "QLabel { border-width:1px;border-color:black;border-radius: 10px;background-color: rgb(242, 87, 45);}";
+        c[10] = "QLabel { border-width:1px;border-color:black;border-radius: 10px;background-color: rgb(66, 168, 129);}";
+        c[11] = "QLabel { border-width:1px;border-color:black;border-radius: 10px;background-color: rgb(31, 135, 132);}";
+        c[12] = "QLabel { border-width:1px;border-color:black;border-radius: 10px;background-color: rgb(0, 105, 125);}";
+
 
         score = 0;
         ui->text2048->setAttribute(Qt::WA_TranslucentBackground, true);
@@ -34,8 +65,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
         ui->lcdNumber->setDigitCount(7);
 
-        for(int i=0;i<16;i++)
+
+        for(int i=0;i<16;i++){
+            block[i]->setText(b[0]);
             block[i]->hide();
+        }
 
 }
 
@@ -48,7 +82,6 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
 {
     srand(time(NULL));
 
-    QString temp_string;
     int rand_num;
     int temp_int=0;
     bool wall=false;
@@ -59,10 +92,10 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         //move
         for(int l=3;l<16;l=l+4)
              for(int i=l-1;i>l-4;i--){
-                  while(block[i]->text() != "0" && block[i+1]->text() == "0" && i<l){
+                  while(block[i]->text() != b[0] && block[i+1]->text() == b[0] && i<l){
                       block[i+1]->setText(block[i]->text());
                       block[i+1]->show();
-                      block[i]->setText("0");
+                      block[i]->setText(b[0]);
                       block[i]->hide();
                       i++;
                       if(i>14)break;
@@ -73,20 +106,21 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         for(int l=3;l<16;l=l+4)
              for(int i=l;i>l-3;i--){
                   for(int j=i-1;j>l-4;j--)
-                        if(block[i]->text() != "0" && block[i]->text() == block[j]->text()){
+                        if(block[i]->text() != b[0] && block[i]->text() == block[j]->text()){
                              for(int k=j+1;k<i;k++)
-                                 if(block[k]->text() != "0"){
+                                 if(block[k]->text() != b[0]){
                                      wall=true;
                                      break;
                                  }
                              if(wall){wall=false;break;}
-                             block[j]->setText("0");
+                             block[j]->setText(b[0]);
                              block[j]->hide();
                              score = score+5;
                              ui->lcdNumber->display(score);
-                             temp_int = log2(block[i]->text().toInt());
-                             temp_string.setNum(pow(2,temp_int+1));
-                             block[i]->setText(temp_string);
+                             for(int k=0;k<12;k++)
+                                 if(block[i]->text()==b[k])
+                                     temp_int=k+1;
+                             block[i]->setText(b[temp_int]);
                          }
              }
     }
@@ -95,10 +129,10 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         //move
         for(int l=0;l<16;l=l+4)
              for(int i=l+1;i<l+4;i++){
-                  while(block[i]->text() != "0" && block[i-1]->text() == "0" && i>l){
+                  while(block[i]->text() != b[0] && block[i-1]->text() == b[0] && i>l){
                       block[i-1]->setText(block[i]->text());
                       block[i-1]->show();
-                      block[i]->setText("0");
+                      block[i]->setText(b[0]);
                       block[i]->hide();
                       i--;
                       if(i<1)break;
@@ -109,20 +143,21 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         for(int l=0;l<16;l=l+4)
              for(int i=l;i<l+3;i++){
                   for(int j=i+1;j<l+4;j++)
-                        if(block[i]->text() != "0" && block[i]->text() == block[j]->text()){
+                        if(block[i]->text() != b[0] && block[i]->text() == block[j]->text()){
                              for(int k=i+1;k<j;k++)
-                                 if(block[k]->text() != "0"){
+                                 if(block[k]->text() != b[0]){
                                      wall=true;
                                      break;
                                 }
                              if(wall){wall=false;break;}
-                             block[j]->setText("0");
+                             block[j]->setText(b[0]);
                              block[j]->hide();
                              score = score+5;
                              ui->lcdNumber->display(score);
-                             temp_int = log2(block[i]->text().toInt());
-                             temp_string.setNum(pow(2,temp_int+1));
-                             block[i]->setText(temp_string);
+                             for(int k=0;k<12;k++)
+                                 if(block[i]->text()==b[k])
+                                     temp_int=k+1;
+                             block[i]->setText(b[temp_int]);
                          }
              }
     }
@@ -130,10 +165,10 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         //move
         for(int l=0;l<4;l++)
              for(int i=l+4;i<l+13;i=i+4){
-                  while(block[i]->text() != "0" && block[i-4]->text() == "0" && i>l){
+                  while(block[i]->text() != b[0] && block[i-4]->text() == b[0] && i>l){
                       block[i-4]->setText(block[i]->text());
                       block[i-4]->show();
-                      block[i]->setText("0");
+                      block[i]->setText(b[0]);
                       block[i]->hide();
                       i=i-4;
                       if(i<4)break;
@@ -143,20 +178,21 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         for(int l=0;l<4;l++)
              for(int i=l;i<l+9;i=i+4){
                   for(int j=i+4;j<l+13;j=j+4)
-                        if(block[i]->text() != "0" && block[i]->text() == block[j]->text()){
+                        if(block[i]->text() != b[0] && block[i]->text() == block[j]->text()){
                              for(int k=i+4;k<j;k=k+4)
-                                if(block[k]->text() != "0"){
+                                if(block[k]->text() != b[0]){
                                     wall=true;
                                     break;
                              }
                              if(wall){wall=false;break;}
-                             block[j]->setText("0");
+                             block[j]->setText(b[0]);
                              block[j]->hide();
                              score = score+5;
                              ui->lcdNumber->display(score);
-                             temp_int = log2(block[i]->text().toInt());
-                             temp_string.setNum(pow(2,temp_int+1));
-                             block[i]->setText(temp_string);
+                             for(int k=0;k<12;k++)
+                                 if(block[i]->text()==b[k])
+                                     temp_int=k+1;
+                             block[i]->setText(b[temp_int]);
                          }
              }
     }
@@ -164,10 +200,10 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         //move
         for(int l=12;l<16;l++)
              for(int i=l-4;i>l-13;i=i-4){
-                  while(block[i]->text() != "0" && block[i+4]->text() == "0" && i<l){
+                  while(block[i]->text() != b[0] && block[i+4]->text() == b[0] && i<l){
                       block[i+4]->setText(block[i]->text());
                       block[i+4]->show();
-                      block[i]->setText("0");
+                      block[i]->setText(b[0]);
                       block[i]->hide();
                       i=i+4;
                       if(i>11)break;
@@ -177,41 +213,56 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         for(int l=12;l<16;l++)
              for(int i=l;i>l-9;i=i-4){
                   for(int j=i-4;j>l-13;j=j-4)
-                        if(block[i]->text() != "0" && block[i]->text() == block[j]->text()){
+                        if(block[i]->text() != b[0] && block[i]->text() == block[j]->text()){
                              for(int k=j+4;k<i;k=k+4)
-                                if(block[k]->text() != "0"){
+                                if(block[k]->text() != b[0]){
                                     wall=true;
                                     break;
                              }
                              if(wall){wall=false;break;}
-                             block[j]->setText("0");
+                             block[j]->setText(b[0]);
                              block[j]->hide();
                              score = score+5;
                              ui->lcdNumber->display(score);
-                             temp_int = log2(block[i]->text().toInt());
-                             temp_string.setNum(pow(2,temp_int+1));
-                             block[i]->setText(temp_string);
+                             for(int k=0;k<12;k++)
+                                 if(block[i]->text()==b[k])
+                                     temp_int=k+1;
+                             block[i]->setText(b[temp_int]);
                          }
              }
     }
+
     for(int i=0;i<16;i++)
-        if(block[i]->text()=="0")
+        if(block[i]->text()==b[0])
             full=false;
     if(!full){
-        do{rand_num=rand()%16;}while(block[rand_num]->text()!="0");
-        block[rand_num]->setText("2");
+        do{rand_num=rand()%16;}while(block[rand_num]->text()!=b[0]);
+        block[rand_num]->setText(b[1]);
         block[rand_num]->show();
+    }else{
+       //need end statement
+
     }
     for(int i=0;i<16;i++)
-        if(block[i]->text()=="2048")
+        if(block[i]->text()==b[11])
             end=true;
+    for(int i=0;i<16;i++)
+        for(int k=0;k<13;k++)
+            if(block[i]->text()==b[k])
+                block[i]->setStyleSheet(c[k]);
+
+
     if(end){
         QElapsedTimer t;
 
         for(int i=0;i<16;i++){
-            block[i]->setText("2048!");
+            block[i]->setText(b[12]);
             block[i]->show();
         }
+        for(int i=0;i<16;i++)
+            for(int k=0;k<13;k++)
+                if(block[i]->text()==b[k])
+                    block[i]->setStyleSheet(c[k]);
         QWidget::setEnabled(false);
         t.start();
         while(t.elapsed()<2000)
@@ -219,13 +270,12 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         on_pushButton_clicked();
         QWidget::setEnabled(true);
     }
-
 }
 
 void MainWindow::on_pushButton_clicked()
 {
     for(int i=0;i<16;i++){
-        block[i]->setText("0");
+        block[i]->setText(b[0]);
         block[i]->hide();
     }
 
@@ -239,6 +289,10 @@ void MainWindow::on_pushButton_clicked()
     while(rand_num2==rand_num);
     block[rand_num]->show();
     block[rand_num2]->show();
-    block[rand_num]->setText("2");
-    block[rand_num2]->setText("2");
+    block[rand_num]->setText(b[1]);
+    block[rand_num2]->setText(b[1]);
+    for(int i=0;i<16;i++)
+        for(int k=0;k<13;k++)
+            if(block[i]->text()==b[k])
+                block[i]->setStyleSheet(c[k]);
 }

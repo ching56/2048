@@ -24,6 +24,8 @@ private:
     QLabel* block[16];
     Ui::MainWindow *ui;
     int score;
+    QString b[13];
+    QString c[13];
 };
 
 #endif // MAINWINDOW_H
