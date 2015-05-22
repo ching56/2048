@@ -240,9 +240,26 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         block[rand_num]->setText(b[1]);
         block[rand_num]->show();
     }else{
-       //need end statement
+        //end statement
+       bool thesame=false;
+
+       for(int i=0;i<16;i+=4)
+           for(int j=i;j<i+3;j++)
+               if(block[j]->text()==block[j+1]->text())
+                   thesame=true;
+       if(!thesame){
+            for(int i=0;i<4;i++)
+                for(int j=i;j<i+12;j+=4)
+                    if(block[j]->text()==block[j+4]->text())
+                        thesame=true;
+       }
+       if(thesame){
+           end=false;
+
+       }else{end=true;};
 
     }
+
     for(int i=0;i<16;i++)
         if(block[i]->text()==b[11])
             end=true;
