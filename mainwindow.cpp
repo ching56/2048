@@ -64,6 +64,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
         ui->lcdNumber->setDigitCount(7);
+        ui->frame->hide();
 
 
         for(int i=0;i<16;i++){
@@ -80,6 +81,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::keyPressEvent(QKeyEvent *event)
 {
+    if(ui->frame->isVisible()){
+        return;
+    }
     srand(time(NULL));
 
     int rand_num;
@@ -270,7 +274,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
 
 
     if(end){
-        QElapsedTimer t;
+        /*QElapsedTimer t;
 
         for(int i=0;i<16;i++){
             block[i]->setText(b[12]);
@@ -285,7 +289,11 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         while(t.elapsed()<2000)
             QCoreApplication::processEvents();
         on_pushButton_clicked();
-        QWidget::setEnabled(true);
+        QWidget::setEnabled(true);*/
+
+        ui->frame->show();
+        ui->socrelabel->setText(QString::number(score));
+
     }
 }
 
@@ -312,4 +320,10 @@ void MainWindow::on_pushButton_clicked()
         for(int k=0;k<13;k++)
             if(block[i]->text()==b[k])
                 block[i]->setStyleSheet(c[k]);
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    on_pushButton_clicked();
+    ui->frame->hide();
 }
