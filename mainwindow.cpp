@@ -6,6 +6,8 @@
 #include <cstdlib>
 #include <QString>
 #include <QElapsedTimer>
+#include <vector>
+using namespace std;
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -91,6 +93,8 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     bool wall=false;
     bool full=true;
     bool end=false;
+    vector<int> before;
+    vector<int> after;
 
     if(event->key() == Qt::Key_Right){
         //move
@@ -243,7 +247,12 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         do{rand_num=rand()%16;}while(block[rand_num]->text()!=b[0]);
         block[rand_num]->setText(b[1]);
         block[rand_num]->show();
-    }else{
+        full=true;
+        for(int i=0;i<16;i++)
+            if(block[i]->text()==b[0])
+                full=false;
+    }
+    if(full){
         //end statement
        bool thesame=false;
 
@@ -259,7 +268,6 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
        }
        if(thesame){
            end=false;
-
        }else{end=true;};
 
     }
@@ -326,4 +334,9 @@ void MainWindow::on_pushButton_2_clicked()
 {
     on_pushButton_clicked();
     ui->frame->hide();
+}
+
+void MainWindow::move(vector<int> &before, vector<int> &after)
+{
+
 }
