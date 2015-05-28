@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>474</width>
-    <height>612</height>
+    <width>490</width>
+    <height>608</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,50 +17,25 @@
    <string notr="true">background-color: rgb(218, 212, 185);</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QLabel" name="text2048">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>0</y>
-      <width>251</width>
-      <height>141</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Adobe Fan Heiti Std</family>
-      <pointsize>27</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.Helvetica Neue DeskInterface'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:64pt; font-weight:600; color:#ffffff;&quot;&gt;2048&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="tile_9">
     <property name="geometry">
      <rect>
-      <x>46</x>
-      <y>356</y>
-      <width>90</width>
-      <height>90</height>
+      <x>30</x>
+      <y>370</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="font">
@@ -96,22 +71,22 @@ background-color: rgb(216, 179, 104);</string>
    <widget class="QLabel" name="tile_5">
     <property name="geometry">
      <rect>
-      <x>46</x>
-      <y>258</y>
-      <width>90</width>
-      <height>90</height>
+      <x>30</x>
+      <y>260</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="font">
@@ -147,22 +122,22 @@ background-color: rgb(216, 179, 104);</string>
    <widget class="QLabel" name="tile_11">
     <property name="geometry">
      <rect>
-      <x>242</x>
-      <y>356</y>
-      <width>90</width>
-      <height>90</height>
+      <x>250</x>
+      <y>370</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="font">
@@ -198,22 +173,22 @@ background-color: rgb(216, 179, 104);</string>
    <widget class="QLabel" name="tile_8">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>258</y>
-      <width>90</width>
-      <height>90</height>
+      <x>360</x>
+      <y>260</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="font">
@@ -249,22 +224,22 @@ background-color: rgb(216, 179, 104);</string>
    <widget class="QLabel" name="tile_10">
     <property name="geometry">
      <rect>
-      <x>144</x>
-      <y>356</y>
-      <width>90</width>
-      <height>90</height>
+      <x>140</x>
+      <y>370</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="font">
@@ -300,22 +275,22 @@ background-color: rgb(216, 179, 104);</string>
    <widget class="QLabel" name="tile_14">
     <property name="geometry">
      <rect>
-      <x>144</x>
-      <y>454</y>
-      <width>90</width>
-      <height>90</height>
+      <x>140</x>
+      <y>480</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="font">
@@ -354,22 +329,22 @@ background-color: rgb(216, 179, 104);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>454</y>
-      <width>90</width>
-      <height>90</height>
+      <x>360</x>
+      <y>480</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="font">
@@ -387,7 +362,7 @@ background-color: rgb(216, 179, 104);</string>
      <string notr="true">border-width:1px; 
 border-color:black;
 border-radius: 10px;
-background-color: rgb(216, 179, 104)</string>
+background-color: rgb(153, 153, 153);</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::NoFrame</enum>
@@ -408,22 +383,22 @@ background-color: rgb(216, 179, 104)</string>
    <widget class="QLabel" name="tile_2">
     <property name="geometry">
      <rect>
-      <x>144</x>
-      <y>160</y>
-      <width>90</width>
-      <height>90</height>
+      <x>140</x>
+      <y>150</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="font">
@@ -459,22 +434,22 @@ background-color: rgb(216, 179, 104);</string>
    <widget class="QLabel" name="tile_6">
     <property name="geometry">
      <rect>
-      <x>144</x>
-      <y>258</y>
-      <width>90</width>
-      <height>90</height>
+      <x>140</x>
+      <y>260</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="font">
@@ -510,22 +485,22 @@ background-color: rgb(216, 179, 104);</string>
    <widget class="QLabel" name="tile_15">
     <property name="geometry">
      <rect>
-      <x>242</x>
-      <y>454</y>
-      <width>90</width>
-      <height>90</height>
+      <x>250</x>
+      <y>480</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="font">
@@ -564,22 +539,22 @@ background-color: rgb(216, 179, 104);</string>
    <widget class="QLabel" name="tile_4">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>160</y>
-      <width>90</width>
-      <height>90</height>
+      <x>360</x>
+      <y>150</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="font">
@@ -615,22 +590,22 @@ background-color: rgb(216, 179, 104);</string>
    <widget class="QLabel" name="tile_7">
     <property name="geometry">
      <rect>
-      <x>242</x>
-      <y>258</y>
-      <width>90</width>
-      <height>90</height>
+      <x>250</x>
+      <y>260</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="font">
@@ -666,22 +641,22 @@ background-color: rgb(216, 179, 104);</string>
    <widget class="QLabel" name="tile_12">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>356</y>
-      <width>90</width>
-      <height>90</height>
+      <x>360</x>
+      <y>370</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="font">
@@ -717,22 +692,22 @@ background-color: rgb(216, 179, 104);</string>
    <widget class="QLabel" name="tile_13">
     <property name="geometry">
      <rect>
-      <x>46</x>
-      <y>454</y>
-      <width>90</width>
-      <height>90</height>
+      <x>30</x>
+      <y>480</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="font">
@@ -768,22 +743,22 @@ background-color: rgb(216, 179, 104);</string>
    <widget class="QLabel" name="tile_1">
     <property name="geometry">
      <rect>
-      <x>46</x>
-      <y>160</y>
-      <width>90</width>
-      <height>90</height>
+      <x>30</x>
+      <y>150</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="font">
@@ -819,22 +794,22 @@ background-color: rgb(216, 179, 104);</string>
    <widget class="QLabel" name="tile_3">
     <property name="geometry">
      <rect>
-      <x>242</x>
-      <y>160</y>
-      <width>90</width>
-      <height>90</height>
+      <x>250</x>
+      <y>150</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>90</width>
-      <height>90</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="font">
@@ -867,33 +842,20 @@ background-color: rgb(216, 179, 104);</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="background">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>148</y>
-      <width>411</width>
-      <height>411</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(130, 192, 175);
-border-width:1px; 
-border-color:black;
-border-radius: 10px;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QLabel" name="bg2048">
     <property name="geometry">
      <rect>
       <x>30</x>
       <y>30</y>
-      <width>191</width>
+      <width>241</width>
       <height>91</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Verdana</family>
+      <italic>false</italic>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">border-width:1px; 
@@ -903,13 +865,13 @@ background-color: rgb(22, 30, 62);
 </string>
     </property>
     <property name="text">
-     <string/>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:72pt; color:#ffffff;&quot;&gt;2048&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>280</x>
       <y>70</y>
       <width>61</width>
       <height>51</height>
@@ -1100,7 +1062,7 @@ border-radius: 10px;</string>
    <widget class="QLCDNumber" name="lcdNumber">
     <property name="geometry">
      <rect>
-      <x>310</x>
+      <x>350</x>
       <y>70</y>
       <width>121</width>
       <height>51</height>
@@ -1258,10 +1220,10 @@ background-color: rgb(40, 81, 113);</string>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>140</y>
-      <width>431</width>
-      <height>421</height>
+      <x>10</x>
+      <y>260</y>
+      <width>471</width>
+      <height>161</height>
      </rect>
     </property>
     <property name="autoFillBackground">
@@ -1285,8 +1247,8 @@ border-radius: 30px;</string>
     <widget class="QLabel" name="urscore">
      <property name="geometry">
       <rect>
-       <x>180</x>
-       <y>120</y>
+       <x>190</x>
+       <y>10</y>
        <width>81</width>
        <height>20</height>
       </rect>
@@ -1298,10 +1260,10 @@ border-radius: 30px;</string>
     <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
-       <x>110</x>
-       <y>310</y>
+       <x>120</x>
+       <y>110</y>
        <width>231</width>
-       <height>61</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -1329,8 +1291,8 @@ border-radius: 10px;</string>
     <widget class="QLabel" name="socrelabel">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>190</y>
+       <x>170</x>
+       <y>40</y>
        <width>121</width>
        <height>61</height>
       </rect>
@@ -1351,9 +1313,869 @@ border-radius: 10px;</string>
      </property>
     </widget>
    </widget>
+   <widget class="QLabel" name="background">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>451</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(130, 192, 175);
+border-width:1px; 
+border-color:black;
+border-radius: 10px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tile_17">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>480</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width:1px; 
+border-color:black;
+border-radius: 10px;
+background-color: rgb(204, 204, 204);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tile_18">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>150</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width:1px; 
+border-color:black;
+border-radius: 10px;
+background-color: rgb(204, 204, 204);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tile_19">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>150</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width:1px; 
+border-color:black;
+border-radius: 10px;
+background-color: rgb(204, 204, 204);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tile_20">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>260</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width:1px; 
+border-color:black;
+border-radius: 10px;
+background-color: rgb(204, 204, 204);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tile_21">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>370</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width:1px; 
+border-color:black;
+border-radius: 10px;
+background-color: rgb(204, 204, 204);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tile_22">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>370</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width:1px; 
+border-color:black;
+border-radius: 10px;
+background-color: rgb(204, 204, 204);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tile_23">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>260</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width:1px; 
+border-color:black;
+border-radius: 10px;
+background-color: rgb(204, 204, 204);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tile_24">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>260</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width:1px; 
+border-color:black;
+border-radius: 10px;
+background-color: rgb(204, 204, 204);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tile_25">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>480</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width:1px; 
+border-color:black;
+border-radius: 10px;
+background-color: rgb(204, 204, 204);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tile_26">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>260</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width:1px; 
+border-color:black;
+border-radius: 10px;
+background-color: rgb(204, 204, 204);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tile_27">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>150</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width:1px; 
+border-color:black;
+border-radius: 10px;
+background-color: rgb(204, 204, 204);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tile_28">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>150</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width:1px; 
+border-color:black;
+border-radius: 10px;
+background-color: rgb(204, 204, 204);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tile_29">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>370</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width:1px; 
+border-color:black;
+border-radius: 10px;
+background-color: rgb(204, 204, 204);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tile_30">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>480</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width:1px; 
+border-color:black;
+border-radius: 10px;
+background-color: rgb(204, 204, 204);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tile_31">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>480</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width:1px; 
+border-color:black;
+border-radius: 10px;
+background-color: rgb(204, 204, 204);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tile_32">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>370</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width:1px; 
+border-color:black;
+border-radius: 10px;
+background-color: rgb(204, 204, 204);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <zorder>background</zorder>
+   <zorder>tile_31</zorder>
+   <zorder>tile_28</zorder>
+   <zorder>tile_21</zorder>
+   <zorder>tile_20</zorder>
+   <zorder>tile_17</zorder>
+   <zorder>tile_25</zorder>
+   <zorder>tile_32</zorder>
+   <zorder>tile_27</zorder>
+   <zorder>tile_24</zorder>
+   <zorder>tile_22</zorder>
+   <zorder>tile_19</zorder>
+   <zorder>tile_30</zorder>
+   <zorder>tile_29</zorder>
+   <zorder>tile_26</zorder>
+   <zorder>tile_23</zorder>
+   <zorder>tile_18</zorder>
    <zorder>lcdNumber</zorder>
    <zorder>bg2048</zorder>
-   <zorder>background</zorder>
    <zorder>tile_9</zorder>
    <zorder>tile_5</zorder>
    <zorder>tile_11</zorder>
@@ -1370,7 +2192,6 @@ border-radius: 10px;</string>
    <zorder>tile_13</zorder>
    <zorder>tile_1</zorder>
    <zorder>tile_3</zorder>
-   <zorder>text2048</zorder>
    <zorder>pushButton</zorder>
    <zorder>frame</zorder>
   </widget>
