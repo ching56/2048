@@ -433,24 +433,25 @@ void MainWindow::moveblock()
     moved=true;
     bool end=false;
     int rand_num;
+    int unit=22;
     for(int i=0;i<16;i++){
        if(after[i]!=i&&after[i]!=-1){
        if(block[i]->pos().x()<pos_x[after[i]]){//avoid trigger this one when left
 
-          block[i]->move(block[i]->pos().x()+10,block[i]->pos().y());
+          block[i]->move(block[i]->pos().x()+unit,block[i]->pos().y());
 
           moved=false;
        }
        if(block[i]->pos().y()<pos_y[after[i]]){
-           block[i]->move(block[i]->pos().x(),block[i]->pos().y()+10);
+           block[i]->move(block[i]->pos().x(),block[i]->pos().y()+unit);
            moved=false;
        }
        if(block[i]->pos().x()>pos_x[after[i]]){
-           block[i]->move(block[i]->pos().x()-10,block[i]->pos().y());
+           block[i]->move(block[i]->pos().x()-unit,block[i]->pos().y());
            moved=false;
        }
        if(block[i]->pos().y()>pos_y[after[i]]){
-           block[i]->move(block[i]->pos().x(),block[i]->pos().y()-10);
+           block[i]->move(block[i]->pos().x(),block[i]->pos().y()-unit);
            moved=false;
        }
        }
