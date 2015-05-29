@@ -782,7 +782,7 @@ background-color: rgb(216, 179, 104);</string>
      <number>0</number>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>0</string>
     </property>
     <property name="textFormat">
      <enum>Qt::RichText</enum>

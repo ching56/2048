@@ -8,6 +8,7 @@
 #include <QElapsedTimer>
 #include <QThread>
 #include <QTimer>
+#include <QPixmap>
 
 using namespace std;
 
@@ -15,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {       ui->setupUi(this);
+
         timer = new QTimer();
         full=true;
         b[0] = "<html><head/><body><p><span style=\" font-size:36pt; color:#ffffff;\">0</span></p></body></html>";
@@ -67,7 +69,6 @@ MainWindow::MainWindow(QWidget *parent) :
         block[14] =ui->tile_15;
         block[15] =ui->tile_16;
 
-
         ui->lcdNumber->setDigitCount(7);
         ui->frame->hide();
 
@@ -102,6 +103,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     full=true;
     int temp_int=0;
     int speed=1;
+    bool change=false;
     bool wall=false;
     for(int i=0;i<16;i++){
         after[i]=-1;
@@ -137,6 +139,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                       block[i]->setText(b[0]);
                       block[i]->hide();
                       i++;
+                      change=true;
                       if(i>14)break;
                   }
              }
@@ -163,6 +166,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                                  if(block[i]->text()==b[k])
                                      temp_int=k+1;
                              block[i]->setText(b[temp_int]);
+                             change=true;
                          }
              }
         for(int i=0;i<16;i++){
@@ -184,8 +188,10 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                     }
             }
         }
-        for(int i=0;i<16;i++)
+        for(int i=0;i<16;i++){
             if(after[i]!=-1&&after[i]!=i)block[i]->show();
+        }
+        if(change)
         timer->start(speed);
     }
     if(event->key() == Qt::Key_Left){
@@ -203,6 +209,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                       block[i]->hide();
                       i--;
                       if(i<1)break;
+                      change=true;
                   }
              }
 
@@ -229,6 +236,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                                  if(block[i]->text()==b[k])
                                      temp_int=k+1;
                              block[i]->setText(b[temp_int]);
+                             change=true;
                          }
              }
         for(int i=0;i<16;i++){
@@ -252,6 +260,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         }
         for(int i=0;i<16;i++)
             if(after[i]!=-1&&after[i]!=i)block[i]->show();
+        if(change)
         timer->start(speed);
     }
     if(event->key() == Qt::Key_Up){
@@ -268,6 +277,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                       block[i]->hide();
                       i=i-4;
                       if(i<4)break;
+                      change=true;
                   }
              }
         //change value
@@ -292,6 +302,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                                  if(block[i]->text()==b[k])
                                      temp_int=k+1;
                              block[i]->setText(b[temp_int]);
+                             change=true;
                          }
 
              }
@@ -316,6 +327,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         }
         for(int i=0;i<16;i++)
             if(after[i]!=-1&&after[i]!=i)block[i]->show();
+        if(change)
         timer->start(speed);
     }
     if(event->key() == Qt::Key_Down){
@@ -331,7 +343,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                       block[i]->setText(b[0]);
                       block[i]->hide();
                       i=i+4;
-                      if(i>11)break;
+                      if(i>11)break;change=true;
                   }
              }
         //change value
@@ -356,6 +368,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                                  if(block[i]->text()==b[k])
                                      temp_int=k+1;
                              block[i]->setText(b[temp_int]);
+                             change=true;
                          }
              }
         for(int i=0;i<16;i++){
@@ -379,6 +392,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     }
     for(int i=0;i<16;i++)
         if(after[i]!=-1&&after[i]!=i)block[i]->show();
+    if(change)
     timer->start(speed);
 
 
@@ -558,7 +572,3 @@ void MainWindow::moveblock()
 
 }
 
-void MainWindow::on_pushButton_3_clicked()
-{   for(int i=0;i<16;i++)
-        qDebug()<<after[i];
-}

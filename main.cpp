@@ -42,9 +42,9 @@ int main(int argc, char *argv[])
     w.block[9]->show();
     w.block[9]->setText(w.b[1]);
     w.block[9]->setStyleSheet(w.c[1]);
-    //w.block[10]->show();
-    //w.block[10]->setText(w.b[1]);
-    //w.block[10]->setStyleSheet(w.c[1]);
+    w.block[10]->show();
+    w.block[10]->setText(w.b[1]);
+    w.block[10]->setStyleSheet(w.c[1]);
     //w.block[11]->show();
     //w.block[11]->setText(w.b[2]);
     //w.block[11]->setStyleSheet(w.c[2]);/*
