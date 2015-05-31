@@ -2,13 +2,8 @@
 #include "ui_mainwindow.h"
 #include <QDebug>
 #include <QKeyEvent>
-#include <math.h>
-#include <cstdlib>
 #include <QString>
-#include <QElapsedTimer>
-#include <QThread>
 #include <QTimer>
-#include <QPixmap>
 
 using namespace std;
 
@@ -17,8 +12,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {       ui->setupUi(this);
 
+        // initialize the variable
         timer = new QTimer();
         full=true;
+        score = 0;
+        moved=false;
+
         b[0] = "<html><head/><body><p><span style=\" font-size:36pt; color:#ffffff;\">0</span></p></body></html>";
         b[1] = "<html><head/><body><p><span style=\" font-size:36pt; color:#ffffff;\">2</span></p></body></html>";
         b[2] = "<html><head/><body><p><span style=\" font-size:36pt; color:#ffffff;\">4</span></p></body></html>";
@@ -47,11 +46,10 @@ MainWindow::MainWindow(QWidget *parent) :
         c[11] = "QLabel { border-width:1px;border-color:black;border-radius: 10px;background-color: rgb(31, 135, 132);}";
         c[12] = "QLabel { border-width:1px;border-color:black;border-radius: 10px;background-color: rgb(0, 105, 125);}";
 
-
-        score = 0;
-
+        //set the signal & slot connection
         connect(timer,SIGNAL(timeout()),this,SLOT(moveblock()));
-        //hide all tiles
+
+        //to make the access more convenient set the qlabels in ui to array
         block[0] = ui->tile_1;
         block[1] = ui->tile_2;
         block[2] = ui->tile_3;
@@ -69,24 +67,36 @@ MainWindow::MainWindow(QWidget *parent) :
         block[14] =ui->tile_15;
         block[15] =ui->tile_16;
 
+        //set the score board
         ui->lcdNumber->setDigitCount(7);
+        //set the frame hide, and it will appear when the game end
         ui->frame->hide();
 
-
+        //initialize the array which used in animation
         for(int i=0;i<16;i++){
             after[i]=-1;
         }
+
+        //initialize all labels to 0 and hide
         for(int i=0;i<16;i++){
             block[i]->setText(b[0]);
             block[i]->setStyleSheet(c[0]);
             block[i]->hide();
         }
+
+        //save the positions of all labels
         for(int i=0;i<16;i++){
             pos_x[i]=block[i]->pos().x();
             pos_y[i]=block[i]->pos().y();
         }
-            moved=false;
 
+        //show two label when the gmae execute
+        block[8]->show();
+        block[8]->setText(b[1]);
+        block[8]->setStyleSheet(c[1]);
+        block[10]->show();
+        block[10]->setText(b[1]);
+        block[10]->setStyleSheet(c[1]);
 }
 
 MainWindow::~MainWindow()
@@ -96,10 +106,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::keyPressEvent(QKeyEvent *event)
 {
+    //when frame is showed,the game ended, keypress make no effect
     if(ui->frame->isVisible())return;
+    //when animation is processing, keypress make no effect
     if(timer->isActive())return;
-    srand(time(NULL));
 
+    srand(time(NULL));
     full=true;
     int temp_int=0;
     int speed=1;
@@ -208,8 +220,9 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                       block[i]->setText(b[0]);
                       block[i]->hide();
                       i--;
-                      if(i<1)break;
                       change=true;
+                      if(i<1)break;
+
                   }
              }
 
@@ -276,8 +289,9 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                       block[i]->setText(b[0]);
                       block[i]->hide();
                       i=i-4;
+                       change=true;
                       if(i<4)break;
-                      change=true;
+
                   }
              }
         //change value
@@ -343,7 +357,9 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                       block[i]->setText(b[0]);
                       block[i]->hide();
                       i=i+4;
-                      if(i>11)break;change=true;
+                      change=true;
+                      if(i>11)break;
+
                   }
              }
         //change value
@@ -392,6 +408,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     }
     for(int i=0;i<16;i++)
         if(after[i]!=-1&&after[i]!=i)block[i]->show();
+
     if(change)
     timer->start(speed);
 
@@ -523,10 +540,7 @@ void MainWindow::moveblock()
            if(thesame){
                end=false;
            }else{end=true;};
-
-
         }
-
         for(int i=0;i<16;i++)
             if(block[i]->text()==b[11])
                 end=true;
@@ -534,33 +548,12 @@ void MainWindow::moveblock()
             for(int k=0;k<13;k++)
                 if(block[i]->text()==b[k])
                     block[i]->setStyleSheet(c[k]);
-
-
         if(end){
-            /*QElapsedTimer t;
-
-            for(int i=0;i<16;i++){
-                block[i]->setText(b[12]);
-                block[i]->show();
-            }
-            for(int i=0;i<16;i++)
-                for(int k=0;k<13;k++)
-                    if(block[i]->text()==b[k])
-                        block[i]->setStyleSheet(c[k]);
-            QWidget::setEnabled(false);
-            t.start();
-            while(t.elapsed()<2000)
-                QCoreApplication::processEvents();
-            on_pushButton_clicked();
-            QWidget::setEnabled(true);*/
-
             ui->frame->show();
             ui->socrelabel->setText(QString::number(score));
         }
         for(int i=0;i<16;i++)if(block[i]->text()==b[0])block[i]->hide();
     }
-
-    //   block[i]->show();
     for(int i=0;i<16;i++){
         for(int j=0;j<13;j++)
            if(block[i]->text()==b[j])
